@@ -1,0 +1,252 @@
+/* ============================================================
+   NexusAI Design System — tokens.css
+   Version 1.0.0
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap');
+
+/* ── Color Tokens ── */
+:root {
+  /* Brand */
+  --color-primary-50:  #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  /* Accent violet */
+  --color-accent-400: #c084fc;
+  --color-accent-500: #a855f7;
+  --color-accent-600: #9333ea;
+
+  /* Neutrals */
+  --color-neutral-0:   #ffffff;
+  --color-neutral-50:  #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-150: #e9eef5;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-850: #172033;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #080e1a;
+
+  /* Semantic */
+  --color-success-50:  #f0fdf4;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-900: #14532d;
+
+  --color-warning-50:  #fffbeb;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-900: #78350f;
+
+  --color-danger-50:   #fff1f2;
+  --color-danger-400:  #f87171;
+  --color-danger-500:  #ef4444;
+  --color-danger-600:  #dc2626;
+  --color-danger-900:  #7f1d1d;
+
+  --color-info-50:     #eff6ff;
+  --color-info-400:    #60a5fa;
+  --color-info-500:    #3b82f6;
+  --color-info-600:    #2563eb;
+
+  /* ── Light mode surface ── */
+  --bg-page:        var(--color-neutral-50);
+  --bg-surface:     var(--color-neutral-0);
+  --bg-surface-2:   var(--color-neutral-100);
+  --bg-surface-3:   var(--color-neutral-150);
+  --bg-sidebar:     var(--color-neutral-900);
+  --bg-sidebar-hover: rgba(255,255,255,0.07);
+  --bg-sidebar-active: rgba(99,102,241,0.25);
+
+  --border-color:      var(--color-neutral-200);
+  --border-color-2:    var(--color-neutral-300);
+
+  --text-primary:      var(--color-neutral-900);
+  --text-secondary:    var(--color-neutral-500);
+  --text-tertiary:     var(--color-neutral-400);
+  --text-inverse:      var(--color-neutral-0);
+  --text-sidebar:      var(--color-neutral-300);
+  --text-sidebar-active: var(--color-neutral-0);
+
+  --shadow-sm:   0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md:   0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg:   0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --shadow-glow: 0 0 20px rgb(99 102 241 / 0.25);
+
+  /* ── Typography ── */
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'DM Mono', 'Fira Code', monospace;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.8125rem;
+  --text-base: 0.9375rem;
+  --text-md:   1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+
+  /* ── Spacing ── */
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  14px;
+  --radius-xl:  20px;
+  --radius-full: 9999px;
+
+  --sidebar-width: 240px;
+  --topbar-height: 60px;
+
+  /* ── Transitions ── */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Dark mode ── */
+[data-theme="dark"] {
+  --bg-page:        var(--color-neutral-950);
+  --bg-surface:     var(--color-neutral-900);
+  --bg-surface-2:   var(--color-neutral-850);
+  --bg-surface-3:   var(--color-neutral-800);
+  --bg-sidebar:     #05090f;
+  --bg-sidebar-hover: rgba(255,255,255,0.05);
+  --bg-sidebar-active: rgba(99,102,241,0.2);
+
+  --border-color:      rgba(255,255,255,0.07);
+  --border-color-2:    rgba(255,255,255,0.12);
+
+  --text-primary:      var(--color-neutral-50);
+  --text-secondary:    var(--color-neutral-400);
+  --text-tertiary:     var(--color-neutral-600);
+  --text-inverse:      var(--color-neutral-900);
+  --text-sidebar:      var(--color-neutral-500);
+  --text-sidebar-active: var(--color-neutral-0);
+
+  --shadow-sm:   0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md:   0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg:   0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+}
+
+/* ── Theme variants ── */
+[data-color-theme="arctic"] {
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-accent-500:  #06b6d4;
+}
+[data-color-theme="forest"] {
+  --color-primary-500: #10b981;
+  --color-primary-600: #059669;
+  --color-primary-700: #047857;
+  --color-accent-500:  #34d399;
+}
+[data-color-theme="sunrise"] {
+  --color-primary-500: #f59e0b;
+  --color-primary-600: #d97706;
+  --color-primary-700: #b45309;
+  --color-accent-500:  #fb923c;
+}
+[data-color-theme="lavender"] {
+  --color-primary-500: #a855f7;
+  --color-primary-600: #9333ea;
+  --color-primary-700: #7e22ce;
+  --color-accent-500:  #e879f9;
+}
+
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  background: var(--bg-page);
+  line-height: 1.6;
+  transition: background var(--transition-normal), color var(--transition-normal);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-color-2);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--text-tertiary); }
+
+/* ── Selection ── */
+::selection {
+  background: var(--color-primary-100);
+  color: var(--color-primary-800);
+}
+
+/* ── Focus ── */
+:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Utility classes ── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(99,102,241,0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(99,102,241,0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to   { background-position: 200% 0; }
+}
+
+.animate-fade-in    { animation: fadeIn 0.35s ease both; }
+.animate-fade-right { animation: fadeInRight 0.3s ease both; }
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-surface-2) 25%,
+    var(--bg-surface-3) 50%,
+    var(--bg-surface-2) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
